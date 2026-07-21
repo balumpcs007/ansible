@@ -5,8 +5,8 @@
   - name: find uname -a output
     ansible.builtin.command:
       cmd: uname -a
-    register: uname-a_output
+    register: uname_output
   - name: show the uname -a output
     ansible.builtin.debug:
-      var: uname-a_output
+      var: uname_output
     
