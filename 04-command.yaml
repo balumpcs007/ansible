@@ -5,7 +5,7 @@
   - name: check the df -h output
     ansible.builtin.command:
       cmd: df -h
-      register: df_output 
+    register: df_output 
   - name: Show complete output
     ansible.builtin.debug:
       var: df_output
