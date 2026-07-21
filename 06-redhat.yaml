@@ -1,0 +1,12 @@
+- name: finding redhat version
+  hosts: frontend
+  become: yes
+  tasks:
+  - name: finding redhat version
+    ansible.builtin.command:
+      cmd: cat /etc/redhat-release
+    register: redhat_output
+  - name: shwo the redhat output
+    ansible.builtin.debug:
+      var: redhat_output
+    
