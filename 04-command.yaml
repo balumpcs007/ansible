@@ -1,0 +1,7 @@
+- name: run the linux command
+  hosts: frontend
+  become: yes
+  tasks:
+  - name: run the ls -l command
+    ansible.builtin.command:
+    command: ls -l
