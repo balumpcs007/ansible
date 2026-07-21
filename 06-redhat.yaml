@@ -9,4 +9,11 @@
   - name: shwo the redhat output
     ansible.builtin.debug:
       var: redhat_output
+  - name: find uname -a output
+    ansible.builtin.command:
+      cmd: uname -a
+    register: uname_output
+  - name: show the uname -a output
+    ansible.builtin.debug:
+      var: uname_output
     
