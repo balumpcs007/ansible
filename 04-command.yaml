@@ -5,6 +5,7 @@
   - name: run the ls -l command
     ansible.builtin.command:
       cmd: ls -l
-  - name: Display ls output
+    register: ls_output
+  - name: Show complete output
     ansible.builtin.debug:
-        var: ls_output.stdout
+     var: ls_output
