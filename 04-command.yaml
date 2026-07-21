@@ -4,7 +4,7 @@
   tasks:
   - name: run the ls -l command
     ansible.builtin.command:
-      cmd: ls -l
+      cmd: ls -l /etc
     register: ls_output
   - name: Show complete output
     ansible.builtin.debug:
