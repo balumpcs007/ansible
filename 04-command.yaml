@@ -2,14 +2,10 @@
   hosts: frontend
   become: yes
   tasks:
-  # - name: run the ls -l command
-  #   ansible.builtin.command:
-  #     cmd: ls -l /etc
-  #   register: ls_output
   - name: check the df -h output
     ansible.builtin.command:
       cmd: df -h
-      register: ls_output 
+      register: df_output 
   - name: Show complete output
     ansible.builtin.debug:
-      var: ls_output
+      var: df_output
