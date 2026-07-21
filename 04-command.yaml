@@ -4,4 +4,4 @@
   tasks:
   - name: run the ls -l command
     ansible.builtin.command:
-      command: ls -l
+      cmd: ls -l
