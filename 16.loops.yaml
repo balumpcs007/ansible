@@ -5,7 +5,7 @@
   tasks:
   - name: install packages on linux server
     ansible.builtin,debug:
-      name: {{ item }}
+      name: "{{ item }}"
       state: latest
     loop:
     - nginx
