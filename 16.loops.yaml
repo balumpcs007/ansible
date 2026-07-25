@@ -4,7 +4,7 @@
   become: yes
   tasks:
   - name: install packages on linux server
-    ansible.builtin,debug:
+    ansible.builtin.debug:
       name: "{{ item }}"
       state: latest
     loop:
