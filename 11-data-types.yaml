@@ -1,0 +1,20 @@
+- name: data type
+  hosts: local
+  connection: local
+  vars:
+    COURSE: "DevOps with aws" # string
+    DURATION: "120 HRS" # number
+    is_live: true #boolean
+    # list
+    tools:
+    - "linux"
+    - "shell"
+    - "ansinle"
+    - "aws"
+    concept:
+      cloud: aws
+      cm: ansble
+  tasks:
+  - name: print the vars info
+    ansible.builtin.debug:
+      msg: " The Course is: {{ COURSE }}, Duration is: {{ DURATION }}, is_live: {{ is_live }} and tools is: {{ tools }} and concepts are: {{ concept }}"
