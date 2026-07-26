@@ -38,3 +38,10 @@
   - name: check ip address is valid or not
     ansible.builtin.debug:
       msg: "IP is: {{ ipaddress | ansible.utils.ipv4 }}"
+  - name: using shell command
+    ansible.builtin.command:
+      msg: uname -a
+    register: uname_output
+  - name: print output
+    ansible.builtin.debug:
+      msg: "{{ uname_output }}"
