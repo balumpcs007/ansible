@@ -11,3 +11,7 @@
   - name: print the user output
     ansible.builtin.debug:
       msg: "{{ user_output }}"
+  - name: creating roboshop id
+    ansible.builtin.command:
+      cmd: useradd roboshop
+    when: user_output!= 0
