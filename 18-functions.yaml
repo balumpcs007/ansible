@@ -45,3 +45,10 @@
   - name: print output
     ansible.builtin.debug:
       msg: "{{ uname_output }}"
+  - name: redirection
+    ansible.builtin.command:
+      cmd: ls -ltr > /tmp/output.txt
+    register: output.txt
+  - name: print output.txt
+    ansible.builtin.command:
+      msg: "{{ output.txt }}"
