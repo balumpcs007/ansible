@@ -46,7 +46,7 @@
     ansible.builtin.debug:
       msg: "{{ uname_output }}"
   - name: redirection
-    ansible.builtin.command:
+    ansible.builtin.shell:
       cmd: ls -ltr > /tmp/output.txt
     register: redirect_output
   - name: print redirect_output
