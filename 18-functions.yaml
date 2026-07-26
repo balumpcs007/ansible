@@ -37,4 +37,4 @@
       content: "{{ student_yaml | to_nice_json  }}"
   - name: check ip address is valid or not
     ansible.builtin.debug:
-      msg: "IP is: {{ ipaddress | ansible.utils.ip_address }}"
+      msg: "IP is: {{ ipaddress | ansible.utils.ipv4 }}"
